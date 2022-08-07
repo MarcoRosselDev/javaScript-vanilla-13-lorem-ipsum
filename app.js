@@ -21,8 +21,16 @@ const result = document.querySelector('.lorem-text');
 // aplicamos una escucha en el formulario,
 // el evento es tipo submit 
 
-form.addEventListener('submit', function(e){
+form.addEventListener('submit', function (e) {
   e.preventDefault();
   const value = parseInt(amount.value); //importante pasarlo por parseInt para convertir los numeros en numeros.
-  console.log(typeof value);
-})
+  
+  //empty
+  //-infinito,-1
+  //9, infinito+
+  if(isNaN(value) || value < 0 || value > 9) {
+    
+  }
+
+
+});
