@@ -17,3 +17,12 @@ const form = document.querySelector('.lorem-form');
 const amount = document.getElementById('amount');
 // tomo el articulo para inyectarle el resultado
 const result = document.querySelector('.lorem-text');
+
+// aplicamos una escucha en el formulario,
+// el evento es tipo submit 
+
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  const value = parseInt(amount.value); //importante pasarlo por parseInt para convertir los numeros en numeros.
+  console.log(typeof value);
+})
