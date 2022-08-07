@@ -25,11 +25,13 @@ form.addEventListener('submit', function (e) {
   e.preventDefault();
   const value = parseInt(amount.value); //importante pasarlo por parseInt para convertir los numeros en numeros.
   
+  console.log(isNaN(value));
+
   //empty
   //-infinito,-1
   //9, infinito+
   if(isNaN(value) || value < 0 || value > 9) {
-    
+    result.innerHTML = `<p class="result">${text[0]}</p>`
   }
 
 
